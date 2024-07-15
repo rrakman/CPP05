@@ -2,8 +2,16 @@
 
 int main()
 {
-    Bureaucrat one("simo",5);
-    Bureaucrat two("ahmed",3);
-    one = two;
-    std::cout<<"two = "<<one.get_name()<< std::endl;
+    try
+    {
+        Bureaucrat one("Hamiid", 150);
+        std::cout<<one<<std::endl;
+        one.decrement_grade();
+        std::cout<<one<<std::endl;
+    }
+    catch(std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    return EXIT_SUCCESS;
 }
