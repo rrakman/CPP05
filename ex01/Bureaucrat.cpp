@@ -64,5 +64,6 @@ std::ostream& operator<<(std::ostream &os, Bureaucrat const &obj)
 
 void Bureaucrat::signForm(Form &obj)
 {
+    obj.beSigned(*this);
     std::cout<<name<< " signed " << obj.get_name() <<std::endl;
 }

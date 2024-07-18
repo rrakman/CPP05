@@ -5,11 +5,9 @@ int main()
 {
     try
     {
-        Bureaucrat hamid("hamid",1);
+        Bureaucrat hamid("hamid",150);
         Form test("test", 10,1);
-        std::cout<<test<<std::endl;
-        test.beSigned(hamid);
-        std::cout<<test<<std::endl;
+        hamid.signForm(test);
 
     }
     catch(std::exception& e)
