@@ -5,10 +5,9 @@ int main()
 {
     try
     {
-        Bureaucrat hamid("hamid",150);
-        Form test("test", 10,1);
+        Bureaucrat hamid("hamid",1);
+        Form test("test", 10,10);
         hamid.signForm(test);
-
     }
     catch(std::exception& e)
     {
