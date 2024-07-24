@@ -68,3 +68,13 @@ void Form::beSigned(Bureaucrat &obj)
         throw Form::GradeTooLowException();
     is_signed = true;
 }
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return "Grade Too High";
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return "Grade Too Low";
+}

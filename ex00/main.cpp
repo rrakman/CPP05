@@ -4,7 +4,7 @@ int main()
 {
     try
     {
-        Bureaucrat one("Hamiid", 150);
+        Bureaucrat one("Hamiid", -1);
         std::cout<<one<<std::endl;
         one.decrement_grade();
         std::cout<<one<<std::endl;
