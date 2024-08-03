@@ -26,7 +26,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if(this->get_is_signed())
     {
-        if(this->get_grade_to_exec() > executor.get_grade())
+        if(this->get_grade_to_exec() >= executor.get_grade())
         {
             std::string filename = target + "_shrubbery";
             std::ofstream Myfile (filename.c_str());

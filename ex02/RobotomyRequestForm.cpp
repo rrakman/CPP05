@@ -26,7 +26,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if(this->get_is_signed())
     {
-        if (this->get_grade_to_exec() > executor.get_grade())
+        if (this->get_grade_to_exec() >= executor.get_grade())
         {
             std::cout<<"AAAAAAAAAAAAAAAAAAA *drilling noise*"<<std::endl<<target<< " has been robotomized successfully 50% of the time"<<std::endl;
         }

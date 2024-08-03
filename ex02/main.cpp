@@ -2,14 +2,14 @@
 #include"AForm.hpp"
 #include"ShrubberyCreationForm.hpp"
 #include"RobotomyRequestForm.hpp"
+#include"PresidentialPardonForm.hpp"
 
 int main()
 {
     try
     {
-        Bureaucrat hamid("hamid",145);
-        ShrubberyCreationForm form("home");
-        ShrubberyCreationForm second("test");
+        Bureaucrat hamid("hamid",5);
+        PresidentialPardonForm form("home");
         hamid.signForm(form);
         hamid.executeForm(form);
     }
