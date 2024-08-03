@@ -62,7 +62,7 @@ std::ostream& operator<<(std::ostream &os, Bureaucrat const &obj)
     return os << obj.get_name() << ",  bureaucrat grade " << obj.get_grade();
 }
 
-void Bureaucrat::signForm(Form &obj)
+void Bureaucrat::signForm(AForm &obj)
 {
     try{
         obj.beSigned(*this);
@@ -82,4 +82,17 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
     return "Grade is too Low";
+}
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+    try
+    {
+        form.execute(*this);
+    }
+    catch(std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    
 }

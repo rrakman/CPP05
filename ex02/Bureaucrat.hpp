@@ -1,8 +1,8 @@
 #pragma once
 #include<iostream>
-#include"Form.hpp"
+#include"AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -29,7 +29,8 @@ class Bureaucrat
             public:
                 virtual const char* what() const throw();
         };
-        void signForm(Form &obj);
+        void signForm(AForm &obj);
+        void executeForm(AForm const & form);
 };
 
 std::ostream& operator<<(std::ostream &os, Bureaucrat const &obj);

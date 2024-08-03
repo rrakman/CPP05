@@ -78,3 +78,8 @@ const char* AForm::GradeTooLowException::what() const throw()
 {
     return "Grade Too Low";
 }
+
+const char* AForm::Not_Signed::what() const throw()
+{
+    return "Form Not Signed";
+}

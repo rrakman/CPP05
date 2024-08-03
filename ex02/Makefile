@@ -2,7 +2,7 @@ NAME = Bureaucrat
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 OBJ = ${SRC:%.cpp=%.o}
 
 $(NAME): $(OBJ)
@@ -14,7 +14,7 @@ clean:
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) *_shrubbery
 
 re: fclean all
 
