@@ -3,15 +3,20 @@
 #include"ShrubberyCreationForm.hpp"
 #include"RobotomyRequestForm.hpp"
 #include"PresidentialPardonForm.hpp"
+#include"Intern.hpp"
 
 int main()
 {
     try
     {
-        Bureaucrat hamid("hamid",10);
-        PresidentialPardonForm form("home");
-        hamid.signForm(form);
-        hamid.executeForm(form);
+        Intern intern1;
+        AForm * form1 = intern1.makeForm("ShrubberyCreationForm", "home");
+        if(form1)
+        {
+            std::cout << *form1 << std::endl;
+            delete form1;
+        }
+        
     }
     catch(std::exception& e)
     {
