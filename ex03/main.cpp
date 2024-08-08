@@ -10,13 +10,12 @@ int main()
     try
     {
         Intern intern1;
-        AForm * form1 = intern1.makeForm("ShrubberyCreationForm", "home");
+        AForm * form1 = intern1.makeForm("ShrubberyCreationForm", "test");
         if(form1)
         {
             std::cout << *form1 << std::endl;
             delete form1;
         }
-        
     }
     catch(std::exception& e)
     {

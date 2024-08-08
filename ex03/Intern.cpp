@@ -7,6 +7,7 @@ Intern::Intern()
 
 Intern & Intern::operator=(const __unused Intern & ref)
 {
+    // no data to copy
     return *this;
 }
 
@@ -48,7 +49,6 @@ AForm* Intern::makeForm(std::string form_name, std::string form_target)
         }
     }
     throw FormNotFound();
-    return NULL;
 }
 
 const char* Intern::FormNotFound::what() const throw()
